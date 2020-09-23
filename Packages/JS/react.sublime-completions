@@ -1,0 +1,38 @@
+{
+  "scope": "source.js - meta.function.declaration.js,source.ts, source.tsx",
+
+  "completions": [
+    {
+      "contents": "const React = require('react');\n\n${0:rcc}\n\nmodule.exports = ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}};\n",
+      "trigger": "rcf",
+      "annotation": "React File",
+      "details": "React: Stateless Functional Component"
+    },
+    {
+      "contents": "import React from 'react';\n\n${0:rcc}\n\nexport default ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}};\n",
+      "trigger": "rcm",
+      "annotation": "React Module"
+    },
+    
+    {
+      "contents": "class ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}} extends React.Component {\n\t${0:render}\n}",
+      "trigger": "rcs",
+      "annotation": "React Class Component"
+    },
+    {
+      "contents": "const ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}} = (props) => {\n\treturn (\n\t\t${0:div}\n\t)\n}",
+      "trigger": "rcc",
+      "annotation": "React FC"
+    },
+
+
+    { "trigger": "usee", "contents": "useEffect$1(() => {\n\t$0\n}, []);" },
+    { "trigger": "state", "contents": "const [${1:state}, ${2:setState}] = useState$0();" },
+    { "trigger": "dis", "contents": "const dispatch = useDispatch$0();" },
+
+    // redux
+    { "trigger": "sel", "contents": "const ${1:thing} = useSelector$0((state) => ${1:state});" },
+    { "trigger": "dis", "contents": "const dispatch = useDispatch$0();" },
+    { "trigger": "//i", "contents": "// @ts-ignore" },
+  ]
+}

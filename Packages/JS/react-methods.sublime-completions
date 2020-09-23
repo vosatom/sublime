@@ -1,0 +1,15 @@
+{
+  "scope": "meta.class.js,meta.class.tsx",
+  "completions":
+  [
+    { "trigger": "componentDidMount", "contents": "componentDidMount() {\n\t$0\n}" },
+    { "trigger": "componentWillUnmount", "contents": "componentWillUnmount() {\n\t$0\n}" },
+    { "trigger": "componentDidUpdate", "contents": "componentDidUpdate() {\n\t$0\n}" },
+    { "trigger": "componentShouldUpdate", "contents": "componentShouldUpdate() {\n\t$0\n}" },
+    { "trigger": "getSnapshotBeforeUpdate", "contents": "getSnapshotBeforeUpdate(prevProps, prevState) {\n\t$0\n}" },
+    { "trigger": "getDerivedStateFromProps", "contents": "static getDerivedStateFromProps(nextProps, prevState) {\n\treturn {\n\t\t$0\n\t}\n}" },
+
+    { "trigger": "constructor\tClass constructor", "contents": "constructor(props) {\n\tsuper(props);\n\t$0\n}" },
+    { "trigger": "render", "contents": "render() {\n\treturn (\n\t\t${0:div}\n\t);\n}" },
+  ]
+}

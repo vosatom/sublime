@@ -1,0 +1,45 @@
+{
+	"scope": "source.js - meta.function.declaration.js, source.ts, source.tsx",
+	"completions":
+	[
+		{ "trigger": "if\tCondition", "contents": "if (${1:true}) {${0:$TM_SELECTED_TEXT}}" },
+		{ "trigger": "for\tFor-loop", "contents": "for (var ${20:i} = 0; ${20:i} < ${1:Things}.length; ${20:i}++) {\n\t${100:${1:Things}[${20:i}]}$0\n}" },
+		{ "trigger": "fori\tFor-loop (improved)", "contents": "for (var ${20:i} = ${1:Things}.length - 1; ${20:i} >= 0; ${20:i}--) {\n\t${100:${1:Things}[${20:i}]}$0\n}" },
+		{ "trigger": "afn\tAnonymous function", "contents": "function($1) {${0:$TM_SELECTED_TEXT}}" },
+		{ "trigger": "get\tGet Elements", "contents": "getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')" },
+		{ "trigger": "proto\tPrototype", "contents": "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {\n\t${0:// body...}\n}" },
+		{ "trigger": "debugger\tDebug breakpoint", "contents": "debugger;" },
+		{ "trigger": "ael\tEvent listener", "contents": "addEventListener('${1:click}', ${0:afn});" },
+		{ "trigger": "var\tVariable", "contents": "var ${1:key} = ${2:value};" },
+		{ "trigger": "let\tVariable", "contents": "let ${1:key} = ${2:value};" },
+		{ "trigger": "co\tVariable", "contents": "const ${1:key} = ${2:value};" },
+		{ "trigger": "return\tReturn", "contents": "return " },
+		{ "trigger": "use", "contents": "'use strict';" },
+		{ "trigger": "document", "contents": "document" },
+
+		{ "trigger": "class\tClass", "contents": "class ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$\/$1\/g}} {\n\t\t${0}\n}" },
+
+		{ "trigger": "click\tjQuery Click", "contents": "click(${0:afn});" },
+		{ "trigger": "arf", "contents": "($1) => {$2}" },
+
+		{ "trigger": "log", "contents": "console.log(${1:true});" },
+		{ "trigger": "dir", "contents": "console.dir(${1:true});" },
+		{ "trigger": "table", "contents": "console.table(${1:true});" },
+		{ "trigger": "warn", "contents": "console.warn(${1:true});" },
+		{ "trigger": "error", "contents": "console.error(${1:true});" },
+		{ "trigger": "time", "contents": "console.time();" },
+		{ "trigger": "timeEnd", "contents": "console.timeEnd();" },
+		{ "trigger": "import", "contents": "import ${1:React} from '${2:react}';" },
+		{ "trigger": "req", "contents": "const ${1:React} = require('${2:react}');" },
+		{ "trigger": "extends", "contents": "extends ${1:React.Component}" },
+		{ "trigger": "ret", "contents": "return (\n\t$0\n);" },
+		{ "trigger": "expo", "contents": "export ${1:default ${0:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$\/$1\/g}}};" },
+		{ "trigger": "mod", "contents": "module.exports = ${0:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$\/$1\/g}};" },
+		{ "trigger": "div", "contents": "<div>\n\t$0\n</div>" },
+
+		{ "trigger": "styled", "contents": "import styled from 'styled-components';" },
+		{ "trigger": "sc", "contents": "styled.div`\n$0\n`;" },
+		{ "trigger": "cx", "contents": "import cx from 'classnames';" },
+		{ "trigger": "css", "contents": "import './${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$\/$1\/g}}.css';" },
+	]
+}

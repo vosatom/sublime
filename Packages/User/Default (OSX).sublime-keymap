@@ -1,0 +1,42 @@
+[
+  { "keys": ["super+shift+r"], "command": "goto_symbol_in_project" },
+  { "keys": ["alt+space"], "command": "noop" },
+  { "keys": ["super+alt+o"], "command": "noop" },
+  { "keys": ["super+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Open Containing Folder…" },
+  { "keys": ["super+shift+k"], "command": "reveal_in_side_bar" },
+  { "keys": ["super+alt+down"], "command": "goto_definition" },
+  { "keys": ["super+alt+down"], "command": "goto_definition" },
+  { "keys": ["super+alt+shift+w"], "command": "close_all" },
+  { "keys": ["super+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+  { "keys": ["super+."], "command": "insert_snippet", "args": {"contents": ",*."},
+    "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+  },
+  { "keys": ["super+y"], "command": "summarize_numbers" },
+
+  { "keys": ["alt+up"], "command": "swap_line_up" },
+  { "keys": ["alt+down"], "command": "swap_line_down" },
+
+
+  // { inside {}
+  { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{ $0 }"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "punctuation.section.embedded.end,punctuation.definition.block", "match_all": true }
+    ]
+  },
+  { "keys": [":"], "command": "insert_snippet", "args": {"contents": ": $0"}, "context":
+    [
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "meta.object.member", "match_all": true }
+    ]
+  },
+
+  { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{$0}"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "(?:\\=)$", "match_all": true }
+    ]
+  }
+]

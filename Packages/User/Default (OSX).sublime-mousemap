@@ -1,0 +1,9 @@
+[
+  {
+      "button": "button1", 
+      "count": 1, 
+      "modifiers": ["option"],
+      "press_command": "drag_select",
+      "command": "hyper_click_jump"
+  }
+]

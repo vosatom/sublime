@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Emmet",
+		"FileIcons",
+		"HyperClick",
+		"LESS",
+		"LSP",
+		"LSP-typescript",
+		"Markdown Extended",
+		"Mustache",
+		"Oceanic Next Color Scheme",
+		"Package Control",
+		"PackageResourceViewer",
+		"ProjectManager",
+		"Random Everything",
+		"SCSS",
+		"Swift",
+		"Text Pastry",
+		"Theme - Fladaptive",
+		"TypeScript Syntax"
+	]
+}
