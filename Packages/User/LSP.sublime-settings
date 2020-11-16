@@ -1,7 +1,25 @@
-// Settings in here override those in "LSP/LSP.sublime-settings"
 {
-  "document_highlight_style": "",
-  // "lsp_format_on_save": true,
-  "show_diagnostics_in_view_status": false,
-  "only_show_lsp_completions": false,
+	"auto_show_diagnostics_panel": "never",
+	"clients":
+	{
+		"lsp-tsserver":
+		{
+			"enabled": true
+		},
+		"lsp-typescript":
+		{
+			"enabled": true
+		},
+		"typescript-language-server":
+		{
+			"enabled": true
+		}
+	},
+	"disabled_capabilities":
+	[
+		"completion"
+	],
+	"document_highlight_style": "",
+	"only_show_lsp_completions": false,
+	"show_diagnostics_in_view_status": false
 }

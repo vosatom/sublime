@@ -1,0 +1,24 @@
+{
+	"scope": "source.ts, source.tsx",
+	"completions":
+	[
+		{
+			"trigger": "int",
+			"contents": "interface ${1:Props} {\n\t$0\n}",
+			"annotation": "interface",
+		},
+		{
+			"trigger": "type",
+			"contents": "type ${1:Props} = ${0:boolean};",
+		},
+		{
+			"trigger": "int",
+			"contents": "interface ${1:Props} {\n\t$0\n}",
+			"annotation": "interface",
+		},
+		{
+			"trigger": "ig",
+			"contents": "// @ts-ignore",
+		},
+	]
+}

@@ -9,47 +9,47 @@ import sublime_plugin
 # from LSP.plugin.core.typing import Any, List, Dict, Callable, Optional, Union, Tuple, Mapping, TypedDict
 # actions_manager = CodeActionsManager()
 
-class Tomo2Command(sublime_plugin.ViewEventListener):
-  def on_query_completions(self, prefix, locations):
-    print("sdf")
+# class Tomo2Command(sublime_plugin.ViewEventListener):
+#   def on_query_completions(self, prefix, locations):
+#     print("sdf")
 
-    # self.view.run_command(
-    #     "auto_complete", {
-    #         'disable_auto_insert': True,
-    #         'api_completions_only': False,
-    #         'next_completion_if_showing': False
-    #     })
+#     # self.view.run_command(
+#     #     "auto_complete", {
+#     #         'disable_auto_insert': True,
+#     #         'api_completions_only': False,
+#     #         'next_completion_if_showing': False
+#     #     })
 
     
 
-    # return None
-    return (
-      [
-        ["log", "console.log($0);"],
-        ["me2", "method2()"]
-      ],
-      0
-      # sublime.INHIBIT_WORD_COMPLETIONS
-      # sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS
-    )
+#     # return None
+#     return (
+#       [
+#         ["log", "console.log($0);"],
+#         ["me2", "method2()"]
+#       ],
+#       0
+#       # sublime.INHIBIT_WORD_COMPLETIONS
+#       # sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS
+#     )
 
-  # def on_post_text_command(self, command_name, args):
-  #   print(command_name, args)
+#   # def on_post_text_command(self, command_name, args):
+#   #   print(command_name, args)
 
-  #   if command_name == "insert_best_completion" and args['default'] == "\t":
-  #     print("ghg")
-  #     sel = self.view.sel()[0].begin()
-  #     # print(sel)
-  #     # dir(sel)
-  #     sublime.set_timeout(lambda: self.view.run_command("tomo", {'sel': sel}), 1000)
-  #   # if command_name == "swap_line_up" or command_name == "swap_line_down":
-  #   #   sublime.set_timeout(lambda: self.view.run_command("lsp_format_document", {}), 100)
+#   #   if command_name == "insert_best_completion" and args['default'] == "\t":
+#   #     print("ghg")
+#   #     sel = self.view.sel()[0].begin()
+#   #     # print(sel)
+#   #     # dir(sel)
+#   #     sublime.set_timeout(lambda: self.view.run_command("tomo", {'sel': sel}), 1000)
+#   #   # if command_name == "swap_line_up" or command_name == "swap_line_down":
+#   #   #   sublime.set_timeout(lambda: self.view.run_command("lsp_format_document", {}), 100)
       
-  #   # if command_name == "insert_best_completion":
-  #   #   print(args)
+#   #   # if command_name == "insert_best_completion":
+#   #   #   print(args)
 
 
-#     print(command_name)
+# #     print(command_name)
 
 
 class TomoCommand(sublime_plugin.TextCommand):

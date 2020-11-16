@@ -1,6 +1,6 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"auto_complete_with_fields": true,
+	// "auto_complete_with_fields": true,
 	"binary_file_patterns":
 	[
 		"*.jpg",
@@ -16,6 +16,7 @@
 		"*.swf",
 		"*.jar",
 		"*.zip",
+		"*.woff",
 		"node_modules",
 		"new_node_modules",
 		"old_node_modules",
@@ -43,7 +44,7 @@
 		"temp",
 		"node_modules"
 	],
-	"font_face": "Hasklig",
+	"font_face": "JetBrains Mono",
 	"font_options":
 	[
 		"no_round"
@@ -54,22 +55,23 @@
 	[
 		"ASP",
 		"Babel Snippets",
-		"JavaScript",
 		"JavaScript Enhancements",
 		"LaTeX",
 		"LessImproved",
 		"Markdown",
-		"Vintage"
+		"TypeScript Syntax",
+		"Vintage",
 	],
 	"line_padding_bottom": 2,
-	"line_padding_top": 1,
+	"line_padding_top": 2,
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
 	"show_line_endings": true,
-	"show_tab_close_buttons": true,
+	"show_tab_close_buttons": false,
 	"tab_size": 2,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"typescript_auto_format": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"auto_complete_use_history": true,
 }
