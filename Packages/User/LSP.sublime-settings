@@ -17,9 +17,9 @@
 	},
 	"disabled_capabilities":
 	[
-		"completion"
+		// "completion"
 	],
 	"document_highlight_style": "",
-	"only_show_lsp_completions": false,
+	// "only_show_lsp_completions": false,
 	"show_diagnostics_in_view_status": false
 }
