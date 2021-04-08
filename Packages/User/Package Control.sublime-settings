@@ -7,9 +7,11 @@
 	"installed_packages":
 	[
 		"Babel",
+		"Case Conversion",
 		"Emmet",
 		"FileIcons",
 		"HyperClick",
+		"Javascript Beautify",
 		"LESS",
 		"LSP",
 		"LSP-typescript",
@@ -21,9 +23,9 @@
 		"ProjectManager",
 		"Random Everything",
 		"SCSS",
+		"Sort Lines (Numerically)",
 		"Swift",
+		"Terminus",
 		"Text Pastry",
-		"Theme - Fladaptive",
-		"TypeScript Syntax",
 	],
 }

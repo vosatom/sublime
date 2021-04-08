@@ -2,8 +2,15 @@
   {
       "button": "button1", 
       "count": 1, 
-      "modifiers": ["option"],
+      "modifiers": ["super", "ctrl"],
       "press_command": "drag_select",
       "command": "hyper_click_jump"
-  }
+  },
+  // {
+  //     "button": "button1", 
+  //     "count": 1, 
+  //     "modifiers": ["super", "ctrl"],
+  //     "press_command": "drag_select",
+  //     "command": "lsp_symbol_definition"
+  // },
 ]

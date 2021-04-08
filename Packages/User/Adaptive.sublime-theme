@@ -1,0 +1,93 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+  "variables":
+  {
+
+    // "tabset_medium_dark_bg": "#112531",
+
+    // "tabset_medium_dark_bg": "blue",
+
+    "dark_bg": "var(--background)",
+    "medium_dark_bg": "var(--background)",
+    "medium_bg": "var(--background)",
+    "light_bg": "var(--background)",
+
+    "file_tab_unselected_label_color": "green",
+    "file_tab_selected_label_color": "white",
+
+    "sheet_medium_dark_modifier": "blend(black 75%)",
+  },
+  "rules":
+  [
+    {
+      "class": "tabset_control",
+      "settings": {"file_tab_style": ["", "rounded", "square"]},
+      "parents": [{"class": "edit_window", "attributes": ["file_medium_dark"]}],
+      "layer0.tint": "var(--background)"
+    },
+    {
+      "class": "grid_layout_control",
+      "parents": [{"class": "window", "attributes": ["file_medium_dark"]}],
+      "border_color": "var(--background)",
+    },
+
+    {
+      "class": "scroll_tabs_left_button",
+      "content_margin": 0,
+    },
+    {
+      "class": "scroll_tabs_right_button",
+      "content_margin": 0,
+    },
+    {
+      "class": "new_tab_button",
+      "content_margin": 0,
+    },
+    {
+      "class": "show_tabs_dropdown_button",
+      "content_margin": 0,
+    },
+    {
+      "class": "status_bar",
+      "layer0.tint": "#0e202b",
+    },
+    {
+      "class": "sidebar_container",
+      "layer0.tint": "#0e202b",
+    },
+    {
+      "class": "title_bar",
+      "bg": "#112531",
+      "style": "system"
+    },
+    {
+      "class": "button_control",
+      "layer0.tint": "#ebad2a",
+      "layer0.texture": "",
+      "layer0.opacity": { "target": 0.9, "speed": 4.0, "interpolation": "smoothstep" },
+      "fg": "red",
+    },
+    {
+      "class": "button_control",
+      "attributes": ["hover"],
+      "layer0.tint": "#F0C15D",
+    },
+    {
+      "class": "button_control",
+      "attributes": ["pressed"],
+      "layer0.tint": "#ebad2a",
+      "layer0.opacity": { "target": 0.7, "speed": 4.0, "interpolation": "smoothstep" },
+    },
+    {
+      "class": "label_control",
+      "parents": [{"class": "button_control"}],
+      "fg": "black"
+    },
+
+    {
+      "class": "text_area_control",
+      "parents": [{"class": "text_line_control"}],
+      "layer0.tint": "red"
+    },
+  ]
+}

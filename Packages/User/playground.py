@@ -2,6 +2,27 @@
 import sublime
 import sublime_plugin
 
+
+from threading import Timer
+
+
+def debounce(wait):
+    """ Decorator that will postpone a functions
+        execution until after wait seconds
+        have elapsed since the last time it was invoked. """
+    def decorator(fn):
+        def debounced(*args, **kwargs):
+            def call_it():
+                fn(*args, **kwargs)
+            try:
+                debounced.t.cancel()
+            except(AttributeError):
+                pass
+            debounced.t = Timer(wait, call_it)
+            debounced.t.start()
+        return debounced
+    return decorator
+
 # from LSP.plugin.code_actions import CodeActionsManager.
 # from LSP.plugin.code_actions import actions_manager
 # from LSP.plugin.code_actions import run_code_action_or_command
@@ -67,10 +88,16 @@ class TomoCommand(sublime_plugin.TextCommand):
 #         # results.append((config, command['title'], command))
 #     return None
 
-  def run(self, edit, command):
-    print(command)
-    self.view.run_command(command)
-    self.view.run_command("reindent", {"single_line": True})
+  @debounce(0.3)
+  def increment(self):
+    print("format")
+    self.view.run_command("lsp_format_document_range")
+    # self.view.sel().subtract(self.old_region)
+
+  def run(self, edit):
+    # print(command)
+    # self.view.run_command(command)
+    # self.view.run_command("reindent", {"single_line": True})
 
     # self.view.run_command(
     #     "auto_complete", {
@@ -78,13 +105,17 @@ class TomoCommand(sublime_plugin.TextCommand):
     #         'api_completions_only': False,
     #         'next_completion_if_showing': False
     #     })
-#     print("lsp_format_document", sel)
-#     self.commands = []  # type: List[Tuple[str, str, CodeActionOrCommand]]
-#     self.commands_by_config = {}  # type: CodeActionsByConfigName
-#     actions_manager.request(self.view, sel, self.handle_responses)
-#     # sublime.active_window().active_view().run_command("lsp_format_document", {})
-#     # sublime.active_window().active_view().run_command("lsp_format_document", {})
-#     # sublime.active_window().active_view().run_command("swap_line_up", {})
+    # # print("lsp_format_document", sel)
+    # self.commands = []  # type: List[Tuple[str, str, CodeActionOrCommand]]
+    # self.commands_by_config = {}  # type: CodeActionsByConfigName
+    # actions_manager.request(self.view, sel, self.handle_responses)
+    # sublime.active_window().active_view().run_command("lsp_format_document", {})
+    # sublime.active_window().active_view().run_command("expand_selection", { "to": "line"})
+    self.view.run_command("swap_line_up", {})
+    self.old_selection = self.view.sel()
+    self.old_region = sublime.Region(self.old_selection[0].a, self.old_selection[0].b + 1)
+    self.view.sel().add(self.old_region)
+    self.increment()
 
 
 # # lsp_format_document

@@ -15,6 +15,13 @@
 
   { "keys": ["alt+up"], "command": "swap_line_up" },
   { "keys": ["alt+down"], "command": "swap_line_down" },
+  // { "keys": ["alt+up"], "command": "tomo" },
+  // { "keys": ["alt+down"], "command": "swap_line_down" },
+
+
+
+  { "keys": ["super+'"], "command": "toggle_comment", "args": { "block": false } },
+  { "keys": ["super+/"], "command": "toggle_comment", "args": { "block": false } },
 
 
   // { inside {}
@@ -56,5 +63,19 @@
         "operand": "codeActionProvider"
       }
     ]
+  },
+
+  {
+      "command": "lsp_format_document",
+      "keys": [
+          "alt+shift+f"
+      ],
+      "context": [
+          {
+              "key": "lsp.session_with_capability",
+              "operator": "equal",
+              "operand": "documentFormattingProvider | documentRangeFormattingProvider"
+          }
+      ]
   },
 ]

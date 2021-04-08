@@ -27,6 +27,7 @@
 	"enable_inline_error_tips": true,
 	"enable_language_service_for_javascript": true,
 	"enable_typescript_language_service": true,
+	"highlight_line": true,
 	"file_exclude_patterns":
 	[
 		".DS_Store",
@@ -49,17 +50,19 @@
 	[
 		"no_round"
 	],
+	"file_tab_style": "square",
 	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"ActionScript",
+		"AppleScript",
 		"ASP",
 		"Babel Snippets",
 		"JavaScript Enhancements",
 		"LaTeX",
 		"LessImproved",
-		"Markdown",
-		"TypeScript Syntax",
+		"LSP-typescript",
 		"Vintage",
 	],
 	"line_padding_bottom": 2,
@@ -74,4 +77,10 @@
 	"typescript_auto_format": true,
 	"word_wrap": true,
 	"auto_complete_use_history": true,
+
+
+  "newline_after_template": false,
+	"newline_after_method": false,
+
+	"ignored_snippets": ["C++/Snippets/*"],
 }

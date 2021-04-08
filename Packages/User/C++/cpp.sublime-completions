@@ -1,0 +1,10 @@
+{
+    "scope": "(source.c++ | source.objc++)",
+    "completions":
+    [
+        { "trigger": "std", "contents": "using namespace std;" },
+        { "trigger": "ios", "contents": "#include <iostream>" },
+        { "trigger": "cout", "contents": "cout << \"$0\" << endl;" },
+        { "trigger": "cin", "contents": "#include <iostream>" },
+    ]
+}

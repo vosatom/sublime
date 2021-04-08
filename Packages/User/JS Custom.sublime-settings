@@ -1,0 +1,15 @@
+{
+    "configurations": {
+        "TypeScript (JSX)": {
+            "scope": "source.tsx",
+            "file_extensions": [ "tsx" ],
+            "typescript": true,
+            "jsx": true,
+            "custom_templates": {
+                "tags": {
+                    "styled.div": "scope:source.css"
+                }
+            }
+        },
+    }
+}

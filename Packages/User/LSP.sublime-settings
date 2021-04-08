@@ -4,22 +4,93 @@
 	{
 		"lsp-tsserver":
 		{
-			"enabled": true
+			"enabled": true,
 		},
 		"lsp-typescript":
 		{
-			"enabled": true
+			"enabled": true,
 		},
 		"typescript-language-server":
 		{
-			"enabled": true
-		}
-	},
+			"enabled": true,
+		},
+		"rust-analyzer":
+		{
+			"enabled": false,
+		},
+		
+    "clangd": {
+			"enabled": true,
+      "command": [
+        "/usr/local/opt/llvm/bin/clangd",
+      ],
+      "selector": "source.c | source.c++ | source.objc | source.objc++",
+      "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+    },
+   //  "sourcekit-lsp": {
+   //    "command": [
+   //      "xcrun",
+   //      "sourcekit-lsp"
+   //    ],
+   //    "selector": "source.c++",
+			// "enabled": true
+   //  },
+    // "sourcekit-lsp": {
+    //   "enabled": true,
+    //   "command": [
+    //     "xcrun",
+    //     "sourcekit-lsp"
+    //   ],
+    //   "env": {
+    //     // To override the toolchain, uncomment the following:
+    //     // "SOURCEKIT_TOOLCHAIN_PATH": "<path to toolchain>",
+    //   },
+    //   "languages": [
+    //     {
+    //       "scopes": ["source.swift"],
+    //       "syntaxes": [
+    //         "Packages/Swift/Syntaxes/Swift.tmLanguage",
+    //         "Packages/Decent Swift Syntax/Swift.sublime-syntax",
+    //       ],
+    //       "languageId": "swift",
+    //     },
+    //     {
+    //       "scopes": ["source.c"],
+    //       "syntaxes": ["Packages/C++/C.sublime-syntax"],
+    //       "languageId": "c",
+    //     },
+    //     {
+    //       "scopes": ["source.c++"],
+    //       "syntaxes": ["Packages/C++/C++.sublime-syntax"],
+    //       "languageId": "cpp",
+    //     },
+    //     {
+    //       "scopes": ["source.objc"],
+    //       "syntaxes": ["Packages/Objective-C/Objective-C.sublime-syntax"],
+    //       "languageId": "objective-c",
+    //     },
+    //     {
+    //       "scopes": ["source.objc++"],
+    //       "syntaxes": ["Packages/Objective-C/Objective-C++.sublime-syntax"],
+    //       "languageId": "objective-cpp",
+    //     },
+    //   ],
+    // },
+
+    "sourcekit-lsp":
+    {
+			"enabled": true,
+		},
+  },
 	"disabled_capabilities":
 	[
 		// "completion"
-	],
+  ],
 	"document_highlight_style": "",
 	// "only_show_lsp_completions": false,
-	"show_diagnostics_in_view_status": false
+	"show_diagnostics_in_view_status": false,
+  "lsp_code_actions_on_save": {
+    "source.fixAll": false,
+    "source.organizeImports": false,
+  },
 }

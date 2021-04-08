@@ -1,0 +1,117 @@
+{
+    "scope": "(source.c++ | source.objc++)",
+    "completions":
+    [
+        {
+            "trigger": "if",
+            "contents": "if (${1:true}) {${0:$TM_SELECTED_TEXT}}",
+            "annotation": "Condition",
+        },
+        {
+            "trigger": "for",
+            "contents": "for (int ${20:i} = 0; ${20:i} < ${1:size}; ++${20:i}) {\n\t$0\n}"
+        },
+        {
+            "trigger": "return",
+            "annotation": "Return",
+            "contents": "return "
+        },
+
+        // ======
+        // {
+        //     "annotation": "#include <…>",
+        //     "contents": "include <${1:.h}>",
+        //     "trigger": "inc",
+        //     "scope": "(source.c | source.objc | source.c++ | source.objc++) &meta.preprocessor.incomplete",
+        // },
+        // {
+        //     "annotation": "#include \"…\"",
+        //     "contents": "include \"${1:${TM_FILENAME/\\..+$/.h/}}\"",
+        //     "trigger": "inc",
+        //     "scope": "(source.c | source.objc | source.c++ | source.objc++) & meta.preprocessor.incomplete",
+        // },
+        {
+            "annotation": "#include <…>",
+            "contents": "#include <${1:.h}>",
+            "trigger": "Inc",
+            "scope": "(source.c | source.objc | source.c++ | source.objc++) - meta.preprocessor.incomplete",
+        },
+        {
+            "annotation": "#include \"…\"",
+            "contents": "#include \"${1:${TM_FILENAME/\\..+$/.h/}}\"",
+            "trigger": "inc",
+            "scope": "(source.c | source.objc | source.c++ | source.objc++) - meta.preprocessor.incomplete",
+        },
+        {
+            "annotation": "$1.begin(), $1.end()",
+            "contents": "${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), ${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()",
+            "trigger": "beginend",
+            "scope": "source.c++, source.objc++",
+        },
+        // {
+        //     "annotation": "Class",
+        //     "contents": "class ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}}\n{\npublic:\n\t${1}($2);\n\t~${1/(\w+).*/$1/}();\n\t$0\n};",
+        //     "trigger": "class",
+        //     "scope": "source.c++, source.objc++",
+        // },
+        {
+            "annotation": "Enumeration",
+            "contents": "enum ${1:name} {\n\t$0\n};",
+            "trigger": "enum",
+            "scope": "source.c++, source.objc++",
+        },
+        {
+            "annotation": "Vector For Loop",
+            "contents": "for (std::vector<$1>::iterator ${3:i} = $2.begin(); $3 != $2.end(); ++$3) {\n\t$0\n}",
+            "trigger": "forv",
+            "scope": "source.c, source.objc, source.c++, source.objc++",
+        },
+        {
+            "annotation": "For each",
+            "contents": "for (auto & ${3:i} : ${2:items}) {\n\t$0\n}",
+            "trigger": "fore",
+            "scope": "source.c, source.objc, source.c++, source.objc++",
+        },
+        {
+            "annotation": "main()",
+            "contents": "int main(int argc, char const${TM_C_POINTER: *}argv[]) {\n\t${0}\n\treturn 0;\n}",
+            "trigger": "main",
+            "scope": "(source.c | source.objc | source.c++ | source.objc++) & entity.name.function",
+        },
+        // {
+        //     "annotation": "Namespace",
+        //     "contents": "namespace${1/.+/ /m}${1:${TM_FILENAME/^((.*?)\..*)?$/$2/:mine}} {\n\t$0\n}",
+        //     "trigger": "ns",
+        //     "scope": "source.c++, source.objc++",
+        // },
+        {
+            "annotation": "Struct",
+            "contents": "struct ${1:${TM_FILENAME/(.?\\w*)(?:\\.\\w+)*$/$1/g}} {\n\t$0\n};",
+            "trigger": "struct",
+            "scope": "source.c, source.objc, source.c++, source.objc++",
+        },
+        {
+            "annotation": "template <typename ${1:_InputIter}>",
+            "contents": "template <typename ${1:_InputIter}>",
+            "trigger": "tp",
+            "scope": "source.c++, source.objc++",
+        },
+        {
+            "annotation": "Typedef",
+            "contents": "typedef ${1:int} ${2:MyCustomType};",
+            "trigger": "td",
+            "scope": "source.c, source.objc, source.c++, source.objc++",
+        },
+
+
+
+        // operator
+        {
+            "annotation": "Stream operator",
+            "contents": "std::ostream& operator<<(std::ostream& os, const Input & input)",
+            "trigger": "op",
+            "scope": "source.c, source.objc, source.c++, source.objc++",
+        },
+    ]
+}
+
